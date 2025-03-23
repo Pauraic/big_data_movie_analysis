@@ -32,6 +32,6 @@ merged = pd.merge(df,box_office, on="title")
 grouped= merged.groupby(["director","actor"]).agg(net_revenue=("gross","sum")).reset_index().sort_values(by="net_revenue",ascending=False)
 
 
-print(grouped)
+print(grouped.head(30))
 
 
